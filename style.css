@@ -1,0 +1,30 @@
+:root {
+  color-scheme: dark;
+  --bg: #18212c; --card: #202a37; --line: #344152; --field: #141b24;
+  --text: #ece6d9; --muted: #b3bac3; --gold: #e7b75f; --good: #8fc4b3; --bad: #e39a8a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; padding: 2rem 1rem; display: grid; place-items: center;
+  background: var(--bg); color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 1.3rem; line-height: 1.5;
+}
+main { width: 100%; max-width: 40rem; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 2.25rem; }
+.kicker { color: var(--gold); margin: 0 0 .25rem; font-weight: 700; }
+h1 { font-family: Georgia, serif; font-size: 3rem; margin: 0 0 1rem; color: var(--gold); }
+.lead { color: var(--muted); margin: 0 0 1.5rem; }
+.status { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.1rem; border-radius: 12px; border: 2px solid var(--line); background: var(--bg); margin-bottom: 1.5rem; }
+.status b { display: block; }
+.note { display: block; color: var(--muted); font-size: 1.1rem; margin: 0; }
+.mark { flex: none; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: var(--line); }
+.good { border-color: var(--good); } .good .mark { background: var(--good); color: #10231d; }
+.bad { border-color: var(--bad); } .bad .mark { background: var(--bad); color: #2a1410; }
+label { display: block; font-weight: 700; margin: 1rem 0 .4rem; }
+input { width: 100%; font: inherit; padding: .8rem .9rem; color: var(--text); background: var(--field); border: 1px solid #4a5869; border-radius: 10px; }
+input:focus, button:focus { outline: 3px solid var(--gold); outline-offset: 2px; }
+button { margin-top: 1.5rem; width: 100%; font: inherit; font-weight: 700; padding: .9rem; border: 0; border-radius: 10px; background: var(--gold); color: #1d1607; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+.result { margin-top: 1.75rem; padding: 1.2rem; border-radius: 12px; border: 2px solid var(--line); background: var(--bg); }
+.result.good { border-color: var(--good); } .result.bad { border-color: var(--bad); }
+.result-label { margin: 0 0 .3rem; color: var(--muted); font-size: 1.05rem; }
+.reply { margin: 0 0 .6rem; font-size: 1.6rem; font-weight: 700; overflow-wrap: anywhere; }

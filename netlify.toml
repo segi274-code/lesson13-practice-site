@@ -1,0 +1,4 @@
+# Tells Netlify where things are, so the build settings can stay blank.
+[build]
+  publish = "."
+  functions = "netlify/functions"

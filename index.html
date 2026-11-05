@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 13 Webhook Practice</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+  <p class="kicker">Lesson 13 practice site</p>
+  <h1>Send to Make</h1>
+  <p class="lead">Type a comic below and press Send. This page passes it to your Make webhook through a Netlify function, then shows what Make sends back.</p>
+
+  <div id="setup" class="status wait"><span class="mark">…</span><div><b>Webhook address</b><span class="note">Checking…</span></div></div>
+
+  <form id="form">
+    <label for="title">Comic title</label>
+    <input id="title" name="title" type="text" value="Batman" required autocomplete="off">
+    <label for="issue">Issue number</label>
+    <input id="issue" name="issue" type="text" value="1" required autocomplete="off">
+    <button type="submit" id="sendBtn">Send to Make</button>
+  </form>
+
+  <div id="result" class="result" hidden>
+    <p class="result-label">What Make sent back</p>
+    <p id="reply" class="reply"></p>
+    <p id="hint" class="note"></p>
+  </div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
